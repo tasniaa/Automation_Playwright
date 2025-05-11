@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-test.only('Playwright Test 2 - Interact with Elements', async ({ page }) => {
+test('Playwright Test 2 - Interact with Elements', async ({ page }) => {
   const Firstname = page.locator("[name='firstname']")
   const surname = page.locator("[name='lastname']")
   const birthDate = page.locator("select[name='birthday_day']")
