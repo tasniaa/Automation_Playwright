@@ -5,7 +5,7 @@ import { DashboardPage } from '../pages/DashboardPage';
 import { CartPage } from '../pages/CartPage';
 import { CheckoutPage } from '../pages/CheckoutPage';
 
-test.only('Purchase Journey', async ({ page }) => {
+test('Purchase Journey', async ({ page }) => {
   const email = 'rofis72500@neuraxo.com';
   const password = 'Learning1#';
   const productName = 'ADIDAS ORIGINAL';
