@@ -1,5 +1,4 @@
 import {test, expect} from '@playwright/test'
-import path from 'path'
  test ('Playwright Locator', async({page}) =>
 {
       //1. Navigate to the login page
