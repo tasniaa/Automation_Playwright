@@ -37,17 +37,22 @@ export default defineConfig({
 
     // Launch options to maximize the window
     launchOptions: {
-      args: ['--start-maximized'],},
+      args: ['--start-maximized'],
+    },
     headless: false,
+    
+    // Screenshot configuration
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
   },
 
   /* Configure projects for major browsers */
-  /* projects: [
+  projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-
+/* 
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
@@ -77,7 +82,7 @@ export default defineConfig({
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
-  //],
+  ],
 
   /* Run your local dev server before starting the tests */
   // webServer: {

@@ -28,7 +28,7 @@ import {test, expect} from '@playwright/test'
     await expect(profileName).toBeVisible()
     //6. Click on PIM menu
     await pimMenu.click()
-    await page.pause()
+    //await page.pause()
     await page.waitForLoadState('load')
     await expect(table).toBeVisible()
     let statusFound = false;
