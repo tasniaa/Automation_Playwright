@@ -15,7 +15,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './orangeHRM',
   /* Run tests in files in parallel */
-  //fullyParallel: true,
+  fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -32,6 +32,15 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     browserName: 'chromium',
+    channel: 'chrome',
+    viewport: null,
+
+    // Launch options to maximize the window
+    launchOptions: {
+      args: ['--start-maximized'],
+    },
+    headless: false,
+    
     // Screenshot configuration
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
