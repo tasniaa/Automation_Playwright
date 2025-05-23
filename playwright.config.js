@@ -31,15 +31,23 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    browserName: 'chromium',
+    channel: 'chrome',
+    viewport: null,
+
+    // Launch options to maximize the window
+    launchOptions: {
+      args: ['--start-maximized'],},
+    headless: false,
   },
 
   /* Configure projects for major browsers */
-  projects: [
+  /* projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-/* 
+
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
@@ -69,7 +77,7 @@ export default defineConfig({
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
-  ],
+  //],
 
   /* Run your local dev server before starting the tests */
   // webServer: {
