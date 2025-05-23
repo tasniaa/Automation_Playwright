@@ -32,13 +32,6 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     browserName: 'chromium',
-    channel: 'chrome',
-    viewport: null,
-
-    // Launch options to maximize the window
-    launchOptions: {
-      args: ['--start-maximized'],
-    },
     headless: false,
     
     // Screenshot configuration

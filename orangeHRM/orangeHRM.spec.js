@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { DashboardPage } from '../pages/DashboardPage.js';
 import { LoginPage} from '../pages/LoginPage.js';
-import { PIMPage } from '../Pages/PIMPage.js';
+import { PIMPage } from '../pages/PIMPage.js';
 test('Extract employee information from PIM page', async ({ page }) => {
         const loginPage = new LoginPage(page);
         const dashboardPage = new DashboardPage(page);
