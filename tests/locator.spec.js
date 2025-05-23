@@ -58,24 +58,5 @@ import {test, expect} from '@playwright/test'
     await table.screenshot({ path: 'screenshots/validation_failed_status.png' });
     console.log('No employee with status "Full-Time Permanent" found.');
   }
-  //7. Print employee name with status = Full-Time Permanent
-  /*const rowCount = await rows.count();
-    for (let i=1; i<rowCount; i++)
-    {
-        const row = rows.nth(i)
-        const status = await row.locator("[role='cell']").nth(5).textContent()
-        if (status?.trim() === 'Full-Time Permanent' )
-        {
-            const name = await row.locator("[role='cell']").nth(2).textContent()
-            names.push(name?.trim())
-            console.log(name)
-        }
-        //if want to print only 5 names
-        if(names.length >= 5)
-        {
-            break;
-        }
-    }
-*/
 })
 
